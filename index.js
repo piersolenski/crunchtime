@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const removeEmptyLines = require('remove-blank-lines');
 const papaparse = require('papaparse');
