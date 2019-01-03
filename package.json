@@ -14,5 +14,8 @@
     "papaparse": "^4.6.2",
     "remove-blank-lines": "^1.1.0",
     "yargs": "^12.0.5"
+  },
+  "bin": {
+    "crunchtime": "./index.js"
   }
 }
