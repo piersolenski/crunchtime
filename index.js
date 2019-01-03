@@ -4,6 +4,7 @@ const papaparse = require('papaparse');
 const dateFns = require('date-fns');
 const program = require('commander');
 const pjson = require('./package.json');
+const path = require('path');
 
 program
   .version(pjson.version)
@@ -31,14 +32,17 @@ const crunchify = arr => arr.map(row => ({
   Balance: row['Cleared balance'],
 }));
 
-fs.readFile(program.input, 'utf8', (err, data) => {
+const init = input => fs.readFile(input, 'utf8', (err, data) => {
   if (err) return console.log('File does not exist!');
   const rows = convertToJSON(data).data;
   const crunchifiedJSON = keepRows(crunchify(rows), program.rows || rows.length);
   const csv = convertToCSV(crunchifiedJSON);
+  const dir = path.dirname(input);
 
-  fs.writeFile(`${currentPath}/${program.output}`, csv, 'utf8', (err, msg) => {
+  fs.writeFile(`${dir}/${program.output}`, csv, 'utf8', (err, msg) => {
     if (err) return console.log(err);
     console.log(`File written to ${program.output}`);
   });
 });
+
+init(program.input);
