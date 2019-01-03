@@ -20,5 +20,5 @@ Options:
 ### Convert a file
 
 ```sh
-crunchtime index.js -i tide.csv -r 2 -o output.csv
+crunchtime index.js -i tide.csv -r 2 -o crunch.csv
 ```
