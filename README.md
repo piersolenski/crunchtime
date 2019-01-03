@@ -22,9 +22,3 @@ Options:
 ```sh
 crunchtime index.js -i tide.csv -r 2 -o output.csv
 ```
-
-### Get help
-
-```sh
-crunchtime index.js -h
-```
