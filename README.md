@@ -2,16 +2,20 @@
 
 A CLI tool for converting a Tide CSV to the Crunch format
 
+## Installation
+
+Run `npm link` from inside the directory.
+
 ## Usage
 
 ### Convert a file
 
 ```sh
-node index.js -i tide.csv -r 2 -o output.csv
+crunchtime index.js -i tide.csv -r 2 -o output.csv
 ```
 
 ### Get help
 
 ```sh
-node index.js -h
+crunchtime index.js -h
 ```
