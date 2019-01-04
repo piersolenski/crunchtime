@@ -1,12 +1,14 @@
 # Tide To Crunch CSV Converter
 
-A CLI tool for converting a Tide CSV to the Crunch format
+A CLI tool for converting a [Tide](https://tide.co) CSV to the [Crunch](https://crunch.co.uk) format.
 
 ## Installation
 
 Run `npm link` from inside the directory.
 
 ## Usage
+
+Make sure to export you Tide statement as `Cleared transactions only`.
 
 ```
 Options:
