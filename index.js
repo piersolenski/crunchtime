@@ -28,7 +28,7 @@ const convertToJSON = csv => papaparse.parse(removeEmptyLines(csv), { header: tr
 const convertToCSV = json => papaparse.unparse(json);
 
 const crunchify = arr => arr.map(row => ({
-  Date: convertDate(row['Timestamp'], FORMAT),
+  Date: convertDate(row['Date'], FORMAT),
   Reference: row['Reference'],
   Amount: row['Amount'],
   Balance: row['Cleared balance'],
