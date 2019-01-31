@@ -37,7 +37,7 @@ const crunchify = arr => arr.map(row => ({
 const init = input => fs.readFile(input, 'utf8', (err, data) => {
   if (err) return console.log('File does not exist!');
   const rows = convertToJSON(data).data;
-  const crunchifiedJSON = keepRows(crunchify(rows), program.rows || rows.length);
+  const crunchifiedJSON = program.rows ? keepRows(crunchify(rows), program.rows - 1) : crunchify(rows);
   const csv = convertToCSV(crunchifiedJSON);
   const dir = path.dirname(input);
 
